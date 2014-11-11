@@ -1,29 +1,48 @@
 package user
 
+import java.util.Date;
+
+import basic.Images
+
 /** 
 * @ClassName: User 
-* @Description: ÓÃ»§±í  
+* @Description: ç”¨æˆ·è¡¨  
 * @author Pony 
-* @date 2014Äê11ÔÂ8ÈÕ ÏÂÎç9:41:09 
+* @date 2014å¹´11æœˆ8æ—¥ ä¸‹åˆ9:41:09 
 *  
 */
 class User {
 	
-	String account		//ÕËºÅ
-	String passWord		//ÃÜÂë
-	String nickName		//êÇ³Æ
-	String realName		//Éí·İÖ¤ĞÕÃû
-	String idCard		//Éí·İÖ¤ºÅÂë
-	String email		//ÓÊÏä
-	String telepone		//µç»°
-	String auth			//½ÇÉ«È¨ÏŞ
-	
+	String account		//è´¦å·
+	String passWord		//å¯†ç 
+	String nickName		//æ˜µç§°
+	String realName		//èº«ä»½è¯å§“å
+	String idCard		//èº«ä»½è¯å·ç 
+	String email		//é‚®ç®±
+	String telepone		//ç”µè¯
+	String auth			//è§’è‰²æƒé™
+	String cardAImg		//èº«ä»½è¯æ­£é¢
+	String cardBImg		//èº«ä»½è¯åé¢
+	String cardHandImg	//æ‰‹æŒèº«ä»½è¯
+	String carCardImg	//è¡Œè½¦è¯
+	Images images		//è½¦è¾†å›¾ç‰‡
+	Date dateCreated
+	Date lastUpdated
 	
 	static mapping = {
-		version(false)
+		version false
 	}
 	
 	static constraints = {
-		
+		account(unique: true,nullable: false)
+		passWord(nullable: false)
+		nickName(nullable: true)
+		realName(nullable: false)
+		idCard(unique: true,nullable: false)
+		telepone(unique: true,nullable: false)
+		cardAImg(nullable: false)
+		cardBImg(nullable: false)
+		cardHandImg(nullable: false)
+		carCardImg(nullable: false)
 	}
 }
