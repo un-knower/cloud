@@ -1,9 +1,20 @@
+import org.springframework.core.io.ClassPathResource
+import org.springframework.core.io.support.PropertiesLoaderUtils
+
+def pros
+
+try {
+	pros = PropertiesLoaderUtils.loadProperties(new ClassPathResource("app-config.properties"))
+} catch (IOException e) {
+	e.printStackTrace();
+}
+
+
 dataSource {
     pooled = true
-    jmxExport = true
-    driverClassName = "org.h2.Driver"
-    username = "sa"
-    password = ""
+	driverClassName = pros.getProperty("jdbc.driverClassName")
+	username = pros.getProperty("jdbc.username")
+	password = pros.getProperty("jdbc.password")
 }
 hibernate {
     cache.use_second_level_cache = true
@@ -17,20 +28,20 @@ hibernate {
 environments {
     development {
         dataSource {
-            dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
-            url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
+            url = pros.getProperty("jdbc.url")
         }
     }
     test {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = pros.getProperty("jdbc.url")
         }
     }
     production {
         dataSource {
-            dbCreate = "update"
-            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
+            url = pros.getProperty("jdbc.url")
+			pooled = true
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
@@ -40,14 +51,14 @@ environments {
                maxIdle = 25
                maxWait = 10000
                maxAge = 10 * 60000
-               timeBetweenEvictionRunsMillis = 5000
-               minEvictableIdleTimeMillis = 60000
+               timeBetweenEvictionRunsMillis = 1800000
+               minEvictableIdleTimeMillis = 1800000
                validationQuery = "SELECT 1"
                validationQueryTimeout = 3
                validationInterval = 15000
                testOnBorrow = true
                testWhileIdle = true
-               testOnReturn = false
+               testOnReturn = true
                jdbcInterceptors = "ConnectionState"
                defaultTransactionIsolation = java.sql.Connection.TRANSACTION_READ_COMMITTED
             }

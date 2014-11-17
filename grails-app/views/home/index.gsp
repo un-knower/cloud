@@ -32,8 +32,8 @@
    <div class="b-k w310 d-it fl h180">
 	  <div  class="search_l">
 		  <ul>
-			 <li class="select b-t">线路查询</li>
-			 <li>物流跟踪</li>
+			 <li >线路查询</li>
+			 <li class="select b-t">物流跟踪</li>
 			 <li>物流网点</li>
 		  </ul>
 	  </div>

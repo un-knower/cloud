@@ -9,11 +9,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><g:layoutTitle default="云物流"/></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<%--
 		<link rel="shortcut icon" href="${assetPath(src: 'favicon.ico')}" type="image/x-icon">
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
-	    <link rel="stylesheet/less" type="text/css" href="${createLinkTo(dir:'css',file:'style.less')}">
-	    <script type="text/javascript" ${createLinkTo(dir:'js',file:'less.min.js')}></script>
+		 --%>
+	    <link rel="stylesheet/less" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
+	    <link rel="stylesheet/less" type="text/css" href="${createLinkTo(dir:'css',file:'base.css')}">
+	    <script type="text/javascript" src="${createLinkTo(dir:'js',file:'less.min.js')}"></script>
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>

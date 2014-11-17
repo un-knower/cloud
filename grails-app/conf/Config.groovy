@@ -1,3 +1,14 @@
+import org.springframework.core.io.ClassPathResource
+import org.springframework.core.io.support.PropertiesLoaderUtils
+
+def properties
+
+try {
+	properties = PropertiesLoaderUtils.loadProperties(new ClassPathResource("app-config.properties"))
+} catch (IOException e) {
+	e.printStackTrace();
+}
+
 // locations to search for config files that get merged into the main config;
 // config files can be ConfigSlurper scripts, Java properties files, or classes
 // in the classpath in ConfigSlurper format
@@ -60,6 +71,8 @@ grails {
 }
 
 
+
+
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
@@ -114,4 +127,10 @@ log4j.main = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+}
+
+
+filePath {
+	temp = properties.getProperty("filePath.temp")
+	upload = properties.getProperty("filePath.upload")
 }
