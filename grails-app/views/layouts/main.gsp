@@ -14,14 +14,19 @@
 		<link rel="apple-touch-icon" href="${assetPath(src: 'apple-touch-icon.png')}">
 		<link rel="apple-touch-icon" sizes="114x114" href="${assetPath(src: 'apple-touch-icon-retina.png')}">
 		 --%>
-	    <link rel="stylesheet/less" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
-	    <link rel="stylesheet/less" type="text/css" href="${createLinkTo(dir:'css',file:'base.css')}">
-	    <script type="text/javascript" src="${createLinkTo(dir:'js',file:'less.min.js')}"></script>
+	    <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
+	    <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'base.css')}">
+	     <script type="text/javascript" src="${createLinkTo(dir:'js',file:'jquery-1.10.1.min.js')}"></script>
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
 	</head>
 	<body>
+	    <g:render template="/layouts/header"/>
 		<g:layoutBody/>
 	</body>
+	<footer>
+		<g:render template="/layouts/footer"/>
+	</footer>
+	
 </html>
