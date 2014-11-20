@@ -13,12 +13,12 @@
 	<div class="clearfix nav-bj">
 		<div class="main">
 			<ul class="nav">
-				<li class="select"><a href="#">首页</a></li>
-				<li><a href="#">我要发货</a></li>
-				<li><a href="#">我是物流</a></li>
-				<li><a href="#">线路查询</a></li>
-				<li><a href="#">手机物流</a></li>
-				<ul>
+				<li class="select"><a href="${request.contextPath }">首页</a></li>
+				<li><a href="${request.contextPath }">我要发货</a></li>
+				<li><a href="${request.contextPath }">我是物流</a></li>
+				<li><a href="${request.contextPath }">线路查询</a></li>
+				<li><a href="${request.contextPath }">手机物流</a></li>
+			</ul>
 					<span class="nav-add">快速发布信息</span>
 		</div>
 </div>
