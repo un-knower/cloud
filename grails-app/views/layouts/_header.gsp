@@ -14,11 +14,10 @@
 		<div class="main">
 			<ul class="nav">
 				<li class="select"><a href="${request.contextPath }">首页</a></li>
-				<li><a href="${request.contextPath }">我要发货</a></li>
-				<li><a href="${request.contextPath }">我是物流</a></li>
+				<li><a href="${request.contextPath }/goods/index">我是货源</a></li>
+				<li><a href="${request.contextPath }/goods/index">我是物流</a></li>
 				<li><a href="${request.contextPath }">线路查询</a></li>
-				<li><a href="${request.contextPath }">手机物流</a></li>
 			</ul>
-					<span class="nav-add">快速发布信息</span>
+					<span class="nav-add"><a href="${request.contextPath }/send/index">快速发布信息</a></span>
 		</div>
 </div>
