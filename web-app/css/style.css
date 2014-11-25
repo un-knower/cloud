@@ -193,7 +193,7 @@ body { font-family:; font-size: 14px; }
 .reg li em{background:url('../images/reg_b.jpg') no-repeat; height:16px; width:30px; position:absolute; bottom:-16px; left:98px; display:none;}
 .reg-c{ border:1px solid #eeeeee; }
 .reg-form li {padding:10px 0;}
-.reg-form li label{ width:90px; font-size:14px; display:inline-table; text-align:right;}
+.reg-form li label{ width:110px; font-size:14px; display:inline-table; text-align:right;}
 .reg-form li .ipt{ border:1px solid #eeeeee; padding:8px 10px;}
 .ipt_btn{border:1px solid #eeeeee; margin-left:10px; padding:8px 10px; color:#999;}
 .ipt_btn:hover{background-color:#eeeeee;}

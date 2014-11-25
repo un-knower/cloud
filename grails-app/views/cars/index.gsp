@@ -14,13 +14,12 @@
 				<div class="list-filter filter-along">
 					<dl class="filter-category filter-last">
 						<dt>
-							类<span style="display: inline-block; width: 2em;"></span>目:
+							线<span style="display: inline-block; width: 2em;"></span>路:
 						</dt>
 						<dd>
-							<a title="全部" href="#"
-								class="selected"> 全部 </a> <a title=" 一天" href="#"> 还剩一天 </a> <a title="两天"
-								href="#"> 还剩两天 </a> <a title=" 一个月"
-								href="#">还剩一个月 </a>
+						<p class="js_range_input">从 <input name="j" id="minPrice" class="text js_number_type" value="北京" type="text"> 至  <input name="b" id="maxPrice" class="text js_number_type" value="杭州" type="text">
+			                <button type="submit" class="ui-btn ui-btn-mini js_range_submit">确定</button>
+			            </p>
 						</dd>
 					</dl>
 					<!-- 新增优选商城筛选 -->
@@ -71,15 +70,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -95,15 +94,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -119,15 +118,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -143,15 +142,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -167,15 +166,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -191,15 +190,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -215,15 +214,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -239,15 +238,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -263,15 +262,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -287,15 +286,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -311,15 +310,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -335,15 +334,15 @@
 									<em class="list-task-reward">¥&nbsp;100</em><a
 										class="list-task-title"
 										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
+										href="${request.contextPath }/cars/info" target="_blank"
+										data-zbjlog="{obj:'main'}">奔驰大货车50吨位，寻求货源信息！<hl>网络</hl>
 										<hl>推广</hl>
 										<span class="list-icon-top list-icon-yxmall">优选</span>
 										</a>
 								</p>
 								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
 							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
+									<em class="list-task-trusteeship">北京 - 杭州</em>
 								</p></td>
 							<td><p class="normal-p">
 									<a class="blue" rel="nofollow"
@@ -354,31 +353,6 @@
 								</p>
 							<td><span class="text">5天 后截止</span></td>
 						</tr>
-						<tr class="">
-							<td><p>
-									<em class="list-task-reward">¥&nbsp;100</em><a
-										class="list-task-title"
-										title="北京---杭州需要一辆大车<hl>网络</hl><hl>推广</hl>"
-										href="${request.contextPath }/goods/info" target="_blank"
-										data-zbjlog="{obj:'main'}">北京---杭州需要一辆大车<hl>网络</hl>
-										<hl>推广</hl>
-										<span class="list-icon-top list-icon-yxmall">优选</span>
-										</a>
-								</p>
-								<p class="list-task-ctn">北京---杭州需要一辆大车</p></td>
-							<td><p>
-									<em class="list-task-trusteeship">已托管</em>
-								</p></td>
-							<td><p class="normal-p">
-									<a class="blue" rel="nofollow"
-										href="#"
-										target="_blank" data-zbjlog="{obj:'main'}">4</a><span
-										class="text">参与</span><span class="text"> | </span><span
-										class="text">招标</span>
-								</p>
-							<td><span class="text">5天 后截止</span></td>
-						</tr>
-						
 	
 					</tbody>
 				</table>
@@ -394,15 +368,15 @@
 					<ul class="list-recommend-ul unstyled">
 						<li>
 							<div class="recommond-img">
-								<a href="http://task.zhubajie.com/712632/" title="城市宣传片、形象片拍摄"
+								<a href="#" title="城市宣传片、形象片拍摄"
 									target="_blank"><img
 									src="http://p6.zbjimg.com//cms/2013-11/05/cmER37rd2h1129/5278b9f1817f2.jpg"
 									alt="城市宣传片、形象片拍摄"></a>
 							</div>
 							<div class="recommond-other-info">
 								<div class="recommond-title">
-									<em>￥ 1001</em><a href="http://task.zhubajie.com/712632/"
-										target="_blank" title="城市宣传片、形象片拍摄">城市宣传片、形象片拍摄</a>
+									<em>￥ 1001</em><a href="#"
+										target="_blank" title="城市宣传片、形象片拍摄">奔驰大货车</a>
 								</div>
 								<div class="recommond-status">
 									<em class="status-4">交易成功</em> <span class="left-time">
@@ -412,15 +386,15 @@
 						</li>
 						<li>
 							<div class="recommond-img">
-								<a href="http://task.zhubajie.com/3309194/" title="购物网站开发"
+								<a href="#" title="购物网站开发"
 									target="_blank"><img
 									src="http://p6.zbjimg.com//cms/2013-11/05/cmER37rd2h1129/52784f1dc37a9.jpg"
 									alt="购物网站开发"></a>
 							</div>
 							<div class="recommond-other-info">
 								<div class="recommond-title">
-									<em>￥ 10000</em><a href="http://task.zhubajie.com/3309194/"
-										target="_blank" title="购物网站开发">购物网站开发</a>
+									<em>￥ 10000</em><a href="#"
+										target="_blank" title="购物网站开发">奔驰大货车</a>
 								</div>
 								<div class="recommond-status">
 									<em class="status-4">交易成功</em> <span class="left-time">
@@ -431,7 +405,7 @@
 						<li>
 							<div class="recommond-img">
 								<a
-									href="http://www.zhubajie.com/witmart/r?j=14606&amp;lang=cn&amp;utm_source=ZBJ_RenWuDaTong&amp;utm_medium=RenWuLieBiao&amp;utm_campaign=ZBJ"
+									href="#"
 									title="网站建设和设计" target="_blank"><img
 									src="http://p6.zbjimg.com//cms/2014-06/12/cmER37rd2h1129/539951b684c3d.jpg"
 									alt="网站建设和设计"></a>
@@ -439,8 +413,8 @@
 							<div class="recommond-other-info">
 								<div class="recommond-title">
 									<em>$ 1884</em><a
-										href="http://www.zhubajie.com/witmart/r?j=14606&amp;lang=cn&amp;utm_source=ZBJ_RenWuDaTong&amp;utm_medium=RenWuLieBiao&amp;utm_campaign=ZBJ"
-										target="_blank" title="网站建设和设计">网站建设和设计</a>
+										href="#"
+										target="_blank" title="网站建设和设计">奔驰大货车</a>
 								</div>
 								<div class="recommond-status">
 									<em class="status-2">投标中</em> <span class="left-time"> </span>
@@ -449,15 +423,15 @@
 						</li>
 						<li>
 							<div class="recommond-img">
-								<a href="http://task.zhubajie.com/2400561/" title="淘宝网店推广每单4元"
+								<a href="#" title="淘宝网店推广每单4元"
 									target="_blank"><img
 									src="http://p6.zbjimg.com//cms/2013-11/05/cmER37rd2h1129/527852e9a509e.jpg"
 									alt="淘宝网店推广每单4元"></a>
 							</div>
 							<div class="recommond-other-info">
 								<div class="recommond-title">
-									<em>￥ 6000</em><a href="http://task.zhubajie.com/2400561/"
-										target="_blank" title="淘宝网店推广每单4元">淘宝网店推广每单4元</a>
+									<em>￥ 6000</em><a href="#"
+										target="_blank" title="淘宝网店推广每单4元">奔驰大货车</a>
 								</div>
 								<div class="recommond-status">
 									<em class="status-4">交易成功</em> <span class="left-time">

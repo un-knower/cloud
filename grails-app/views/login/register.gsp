@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="layout" content="main" />
-<script type="text/javascript" src="${request.contextPath }/register.js"></script>
+<script type="text/javascript" src="${request.contextPath }/js/register.js"></script>
 </head>
 <body>
 <div>

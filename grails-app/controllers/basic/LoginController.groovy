@@ -10,43 +10,39 @@ class LoginController {
 	
 	
 	def register(){
-		
-		render(view:"register",model:[template:params.type,step:1])
+		render(view:"register",model:[template:params.type,step:(params.step?:1) as int])
 	}
 	
 	def save(){
 		def result
 		if(params.type=="user")result = saveUser(params)
 		if(params.type=="server")result = saveServer(params)
-		render(view:"register",model:[template:params.type,step:params.step,params:params])
+		//redirect(view:"register",model:[template:params.type,step:params.step,params:params])
+		redirect(action:"register",params:[id:result?.id,type:params.type,step:params.step])
 	}
 	
 	def saveUser(params){
-		def result = true 
 		def user = User.get(params.id)?:new User()
 		user.properties = params
 		user.telephone = params.account 
 		if(!user.save(flash:true)){
 			println user.errors
-			result = false
 		}else {
 			params.step = Integer.valueOf(params.step)+1
 		}
-		return result
+		return user
 	}
 	
 	def saveServer(params){
 		println params.toString()
-		def result = true
 		def server = Server.get(params.id)?:new Server()
 		server.properties = params
 		server.telephone = params.account
 		if(!server.save(flash:true)){
 			println server.errors
-			result = false
 		}else {
 			params.step = Integer.valueOf(params.step)+1
 		}
-		return result
+		return server
 	}
 }
