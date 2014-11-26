@@ -1,5 +1,6 @@
 package basic
 
+import grails.converters.JSON
 import user.Server
 import user.User
 
@@ -44,5 +45,14 @@ class LoginController {
 			params.step = Integer.valueOf(params.step)+1
 		}
 		return server
+	}
+	
+	def ajax(){
+		println params.toString()
+		def server = Server.findByAccount(params.param)
+		def map = [:]
+		map.info = server?"已被注册请直接登录！":"可以使用未注册过！"
+		map.status =server?"n":"y"
+		render map as JSON
 	}
 }

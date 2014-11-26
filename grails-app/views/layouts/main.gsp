@@ -22,6 +22,9 @@
 	    <script type="text/javascript" src="${createLinkTo(dir:'js',file:'validata.min.js')}"></script>
 	     <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
 	    <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'base.css')}">
+	    <script src="${createLinkTo(dir:'Validform',file:'Validform_v5.3.2.js')}"></script>
+		<script src="${createLinkTo(dir:'Validform',file:'passwordStrength-min.js')}"></script>
+		<link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'Validform/css',file:'valiform.css')}">
   		<asset:stylesheet src="application.css"/>
 		<asset:javascript src="application.js"/>
 		<g:layoutHead/>
