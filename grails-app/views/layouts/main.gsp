@@ -18,9 +18,12 @@
 	    <script type="text/javascript" src="${createLinkTo(dir:'bootstrap/js',file:'bootstrap.min.js')}"></script>  
 	    <script type="text/javascript" src="${createLinkTo(dir:'validator',file:'bootstrapValidator.js')}"></script>  
 		 --%>
+		<script type="text/javascript"><g:render template="/common/contextJS"></g:render></script>
 	    <script type="text/javascript" src="${createLinkTo(dir:'js',file:'jquery-1.10.1.min.js')}"></script>
 	    <script type="text/javascript" src="${createLinkTo(dir:'js',file:'validata.min.js')}"></script>
-	     <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
+		<script src="${createLinkTo(dir:'js',file:'jquery.fineuploader-3.0.min.js')}"></script>
+		<script src="${createLinkTo(dir:'js',file:'application.js')}"></script>
+	    <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'style.css')}">
 	    <link rel="stylesheet" type="text/css" href="${createLinkTo(dir:'css',file:'base.css')}">
 	    <script src="${createLinkTo(dir:'Validform',file:'Validform_v5.3.2.js')}"></script>
 		<script src="${createLinkTo(dir:'Validform',file:'passwordStrength-min.js')}"></script>

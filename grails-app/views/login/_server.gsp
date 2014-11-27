@@ -1,5 +1,6 @@
 <script>
 $(document).ready(function(){
+	initUploadBtn();
 	$(".register_form").Validform({
 		tiptype:4,
 		usePlugin:{
@@ -51,7 +52,13 @@ $(document).ready(function(){
 		      <ul class="reg-form pt50 pb50 ml30" style="margin-left:200px;">
 			       <li><label><font color="red">* </font>身份证姓名：</label><input type="text" name="realName" class="ipt w251" datatype="s"  sucmsg="通过检测！" nullmsg="请填写身份证姓名！" errormsg="身份证姓名不符合规定！"/>
 				   <li><label><font color="red">* </font>身份证号码：</label><input type="text" name="idCard" class="ipt w251" datatype="/^d{15}|d{}18$" sucmsg="通过检测！" nullmsg="请填写身份证号码！" errormsg="身份证号码不符合规定！"/></li>
-				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证正面：</label><span class="pic-up"></span></li>
+				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证正面：</label>
+					   <div class="uploadBtn upload-btn-container pic-up">
+							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
+							<input type="hidden" name="imgUrl" id="imgUrl" class="uploadInput" value=""/>
+							<img id="pic" style="clip:rect(0 114px 88px 0);position: absolute;" src="" border="0" />
+						</div>
+					</li>
 				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证反面：</label><span class="pic-up"></span></li>
 				   <li><label style="vertical-align: top;"><font color="red">* </font>手持身份证：</label><span class="pic-up"></span></li>
 				   <li><label style="vertical-align: top;"><font color="red">* </font>营业执照：</label><span class="pic-up"></span></li>
@@ -88,59 +95,3 @@ $(document).ready(function(){
 		</g:if>
 	</form>
 </div>
-
-
-
-<%--
-$.validate();
-	 $.formValidator.initConfig({ formid: "register_form", onerorr: function (msg) { alert(msg) }, onsuccess: function () { alert("提交成功！"); return false; } });
-	 $("#passWord").formValidator({onshow:"请输入密码",onfocus:"密码最少为6位",oncorrect:"输入合法"}).inputValidator({ min: 6, empty: { leftempty: false, rightempty: false, emptyerror: "密码两边不能有空格" }, onerror: "密码不能为空或少于6个字符" });
-	 $("#passWord2").formValidator({ onshow: "请输入重复密码", onfocus: "两次密码不许一致哦", oncorrect: "密码一致" }).inputValidator({ min: 6, empty: { leftempty: false, rightempty: false, emptyerror: "重复密码两边不能有空格" }, onerror: "重复密码不能为空" }).compareValidator({ desid: "passWord1", operateor: "=", onerror: "两次密码不一致" });
-
-	
-	
-	     $("#passWord").formValidator({onshow:"请输入密码",onfocus:"密码最少为6位",oncorrect:"输入合法"}).inputValidator({min:6,max:10,onerror:"浣犺緭鍏ョ殑鐢ㄦ埛鍚嶉潪娉?璇风‘璁?}).regexValidator({regexp:"username",datatype:"enum",onerror:"鐢ㄦ埛鍚嶆牸寮忎笉姝ｇ‘"})
-	 	        .ajaxValidator({
-	         	type : "get",
-	 	        url : "Default.aspx",
-	 	        datatype : "json",
-	 	        success : function(data){   
-	 	            if( data == "1" )
-	 	            {
-	 	                return true;
-	 	            }
-	 	            else
-	 	            {
-	 	                return false;
-	            }
-	 	        },
-	 	        buttons: $("#button"),
-	 	        error: function(){alert("鏈嶅姟鍣ㄦ病鏈夎繑鍥炴暟鎹紝鍙兘鏈嶅姟鍣ㄥ繖锛岃閲嶈瘯");},
-	 	        onerror : "璇ョ敤鎴峰悕涓嶅彲鐢紝璇锋洿鎹㈢敤鎴峰悕",
-	         onwait : "姝ｅ湪瀵圭敤鎴峰悕杩涜鍚堟硶鎬ф牎楠岋紝璇风◢鍊?.."
-	 	    }).defaultPassed();
-	 	    
-	 	    var validator = new FormValidator('register_form', [
-    {
-	    name: 'account',
-	    display: 'required',
-	    rules: 'required'
-	}, {
-	    name: 'msgCode',
-	    rules: 'integer'
-	}, {
-	    name: 'password',
-	    rules: 'required'
-	}, {
-	    name: 'password2',
-	    rules: 'required'
-	    display: 'password confirmation',
-	    rules: 'required|matches[password]'
-	}], function(errors, event) {
-	    if (errors.length > 0) {
-	        // Show the errors
-	        alert("error");
-	    }
-});
-	 	    
- 	 --%>  	    
