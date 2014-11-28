@@ -26,6 +26,8 @@ class Server {
 	String cardBImg		//身份证反面
 	String cardHandImg	//手持身份证
 	String carCardImg	//行车证
+	String businessImg	//营业执照
+	String transitImg	//运输资格证
 	Integer step		//当前的信息完整情况
 	Date dateCreated
 	Date lastUpdated
@@ -48,5 +50,7 @@ class Server {
 		auth(nullable: true)
 		email(nullable: true)
 		msgCode(nullable: true)
+		businessImg(nullable: true)
+		transitImg(nullable: true)
 	}
 }

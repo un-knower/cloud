@@ -23,6 +23,28 @@ $(document).ready(function(){
 		}
 	});
 });
+function savaImage(){
+	alert("-----");
+	$(".uploadInput").each(function(){
+		var obj = $(this);
+		var v = obj.val();
+		if(v){
+			$.ajax({
+				type:"POST",
+				url:"${request.contextPath}/image/savetemp",
+				data:{'id':'${params.id}','tempFilePath':v},
+				success:function(res){
+					alert(res);
+					if(res.status == 200){
+						obj.val(res.file);
+					}
+				}
+			});
+		}
+	});
+	return true;
+	
+}
 </script>
 <div class="clearfix main pt15">
     <div class="t-h1">物流商入驻流程</div>
@@ -32,9 +54,10 @@ $(document).ready(function(){
 		<li class="${step==3?'select':'' } }"><h2>在线协议签订</h2><p>1、商家5天内交纳保证金</br>2、签订物流服务平台协议</p><em></em></li>
 		<li class="${step==4?'select':'' } }"><h2>信息审核</h2><p>1、工作人员审核</br>2、通过后发布车辆信息</p><em></em></li>
 	</ul>
-	<form action="${request.contextPath }/login/save" method="post" class="register_form" id="register_form" name="register_form" onsubmit="return check(this)">
+	<form action="${request.contextPath }/login/save" method="post" class="register_form" id="register_form" name="register_form" onsubmit="return savaImage()">
 	    <input type="hidden" value="${step}" name="step">
 	    <input type="hidden" value="server" name="type">
+	    <input type="hidden" value="${params.id }" name="id">
 	    <g:if test="${step==1 }">
 		    <div class="reg-c mt20 ml20 mr20">
 			      <ul class="reg-form pt50 pb50 ml30" style="margin-left:200px;">
@@ -55,14 +78,38 @@ $(document).ready(function(){
 				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证正面：</label>
 					   <div class="uploadBtn upload-btn-container pic-up">
 							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
-							<input type="hidden" name="imgUrl" id="imgUrl" class="uploadInput" value=""/>
-							<img id="pic" style="clip:rect(0 114px 88px 0);position: absolute;" src="" border="0" />
+							<input type="hidden" name="cardAImg" id="cardAImg" class="uploadInput" value="" />
+							<img id="pic" style="height:100%;clip:rect(0 152px 152px 0);position: absolute;" src="" border="0" />
 						</div>
 					</li>
-				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证反面：</label><span class="pic-up"></span></li>
-				   <li><label style="vertical-align: top;"><font color="red">* </font>手持身份证：</label><span class="pic-up"></span></li>
-				   <li><label style="vertical-align: top;"><font color="red">* </font>营业执照：</label><span class="pic-up"></span></li>
-				   <li><label style="vertical-align: top;"><font color="red">* </font>运输资格证：</label><span class="pic-up"></span></li>
+				   <li><label style="vertical-align: top;"><font color="red">* </font>身份证反面：</label>
+				   		<div class="uploadBtn upload-btn-container pic-up">
+							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
+							<input type="hidden" name="cardBImg" id="cardBImg" class="uploadInput" value="" />
+							<img id="pic" style="height:100%;clip:rect(0 152px 152px 0);position: absolute;" src="" border="0" />
+						</div>
+				   </li>
+				   <li><label style="vertical-align: top;"><font color="red">* </font>手持身份证：</label>
+				   	   <div class="uploadBtn upload-btn-container pic-up">
+							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
+							<input type="hidden" name="cardHandImg" id="cardHandImg" class="uploadInput" value=""/>
+							<img id="pic" style="height:100%;clip:rect(0 152px 152px 0);position: absolute;" src="" border="0" />
+						</div>
+				   </li>
+				   <li><label style="vertical-align: top;"><font color="red">* </font>营业执照：</label>
+				   	  <div class="uploadBtn upload-btn-container pic-up">
+							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
+							<input type="hidden" name="businessImg" id="businessImg" class="uploadInput" value=""/>
+							<img id="pic" style="height:100%;clip:rect(0 152px 152px 0);position: absolute;" src="" border="0" />
+						</div>
+				   </li>
+				   <li><label style="vertical-align: top;"><font color="red">* </font>运输资格证：</label>
+				    	<div class="uploadBtn upload-btn-container pic-up">
+							<i onclick="$(this).parent().find('img').attr('src','${request.contextPath}/images/blank.png');$(this).parent().find('input[name=imgUrl]').val('')" class="icon-trash" ></i>
+							<input type="hidden" name="transitImg" id="transitImg" class="uploadInput" value=""/>
+							<img id="pic" style="height:100%;clip:rect(0 152px 152px 0);position: absolute;" src="" border="0" />
+						</div>
+				   </li>
 				   <li><input type="submit" class="btn ml90 pt10 pb10 pl30 pr30" value="下一步"></li>
 			  </ul>
 			</div>

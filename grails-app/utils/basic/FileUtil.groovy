@@ -4,6 +4,7 @@ import grails.converters.JSON
 
 import java.awt.Rectangle
 import java.awt.image.BufferedImage
+import java.util.Date;
 
 import javax.imageio.ImageIO
 
@@ -80,9 +81,27 @@ class FileUtil {
 	 * @param tempFileName
 	 * @return
 	 */
-	
-	
-	/*
+	def static handleImg(def imgPath, def tempFileName) {
+		// 图片处理
+		def image = new Images().save(flush:true)
+		def filePath = "${grailsApplication.config.filePath.upload}/${imgPath}"
+		def filename = filePath + "/${image.id}"
+		def f = new File(filePath)
+		if(!f.exists()) {
+			f.mkdirs()
+		}
+		copy(tempFileName, filename + ".JPEG")
+		String title			//标题
+		String description		//描述
+		String url				//图片路径
+		Date dateCreated
+		Date lastUpdated
+		image.title = "${image.id}.JPEG"
+		image.save()
+		return image
+		
+	}
+	/**
 	def static handleImg(def imgPath, def tempFileName) {
 
 		def image = new TImage().save(flush:true)
@@ -121,7 +140,7 @@ class FileUtil {
 		image.save()
 		return image
 	}
-*/
+	*/
 	/**
 	 * 得到截图后的图片路径
 	 * @param srcImgPath

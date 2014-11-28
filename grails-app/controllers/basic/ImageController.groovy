@@ -25,4 +25,19 @@ class ImageController {
 			render(status: response.SC_INTERNAL_SERVER_ERROR, text:"{success: false}")
 		}
 	}
+	
+	/**
+	 * 保存缓存数据
+	 */
+	def savetemp = {
+		try {
+			def image = FileUtil.handleImg(params.id, params.tempFilePath)
+			def file = image.imgPath
+			def result = [file:"${file}"]
+			render(text:result as JSON,contentType: "application/json", status:response.SC_OK)
+		} catch(Exception e) {
+			println e.message
+			render(status: response.SC_INTERNAL_SERVER_ERROR, text:"{success: false}")
+		}
+	}
 }
